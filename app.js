@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 (function() {require('./lib');})(); //Loader scaffold
 
-require('tav').set(
+var opts = require('tav').set(
     {repl: {
          note: 'Open a REPL into the app',
          value: false
@@ -11,4 +11,7 @@ require('tav').set(
 );
 
 //Boot
-new (require('poopvolcano').PoopVolcano);
+var PoopVolcano = require('poopvolcano'),
+    poop = new PoopVolcano();
+
+if(opts.repl) poop.repl.open();
