@@ -12,5 +12,4 @@ require('tav').set(
     true // Panic on unknown options
 );
 
-
-new Repl();
+new Repl()
