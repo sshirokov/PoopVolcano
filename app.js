@@ -23,6 +23,5 @@ console.log("Loading with: ", opts, opts.args);
 
      server(function (socket) {
                 repl.start(prompt, socket);
-         }).
-         listen(__dirname + "/repl.sock");
+     }).listen(__dirname + "/repl.sock");
 });
