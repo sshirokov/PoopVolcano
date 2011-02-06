@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 (function() {require('./lib');})(); //Loader scaffold
-var twitter = require('twitter-node'),
-    opts = require('tav');
+var twitter = require('twitter-node');
+var Repl = require('poopvolcano/repl').Repl;
 
-opts = opts.set(
+require('tav').set(
     {repl: {
          note: 'Open a REPL into the app',
          value: false
@@ -12,16 +12,5 @@ opts = opts.set(
     true // Panic on unknown options
 );
 
-console.log("Loading with: ", opts, opts.args);
-//REPLs
-(function () {
-     var net = require('net'),
-         repl = require('repl');
-     var sock = __dirname + "/repl.sock",
-         prompt = 'poopvolcano> ';
-     var server = function(fn) { return server = net.createServer(fn); };
 
-     server(function (socket) {
-                repl.start(prompt, socket);
-     }).listen(__dirname + "/repl.sock");
-});
+new Repl();
