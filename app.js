@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 (function() {require('./lib');})(); //Loader scaffold
-var twitter = require('twitter-node');
-var Repl = require('poopvolcano/repl').Repl;
 
 require('tav').set(
     {repl: {
@@ -12,5 +10,5 @@ require('tav').set(
     true // Panic on unknown options
 );
 
-var repl = new Repl();
-
+//Boot
+new (require('poopvolcano').PoopVolcano);
