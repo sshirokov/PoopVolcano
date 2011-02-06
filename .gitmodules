@@ -7,3 +7,9 @@
 [submodule "lib/vendor/String.prototype.format"]
 	path = lib/vendor/String.prototype.format
 	url = git://github.com/prettycode/String.prototype.format.js.git
+[submodule "lib/vendor/oauth"]
+	path = lib/vendor/oauth
+	url = git://github.com/ciaranj/node-oauth.git
+[submodule "lib/vendor/cookie"]
+	path = lib/vendor/cookie
+	url = git://github.com/jed/cookie-node.git
