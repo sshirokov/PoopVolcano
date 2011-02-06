@@ -1,6 +1,6 @@
 [submodule "lib/vendor/twitter-node"]
 	path = lib/vendor/twitter-node
-	url = git://github.com/technoweenie/twitter-node.git
+	url = git://github.com/jdub/node-twitter.git
 [submodule "lib/vendor/tav"]
 	path = lib/vendor/tav
 	url = git://github.com/akaspin/tav.git
