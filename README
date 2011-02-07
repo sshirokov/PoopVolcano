@@ -1,9 +1,6 @@
 PoopVolcano is a clone of @pooptag. The greatest application in the history of computation.
 
-WARNING:
-        As of present this app requires node v0.2.6 (As far as I can tell) and will crash and burn 
-        somewhere in http.js with v0.3*, and *0.4*. Probably related to the HTTP client work in node. :(
-        If you manage to fix it or hear stories of it being fixed, please tell me.
+WARNING: Use node version 0.4 (master).
 
 Once you clone the code run:
 
