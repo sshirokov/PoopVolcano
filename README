@@ -1,0 +1,31 @@
+PoopVolcano is a clone of @pooptag. The greatest application in the history of computation.
+
+WARNING:
+        As of present this app requires node v0.2.6 (As far as I can tell) and will crash and burn 
+        somewhere in http.js with v0.3*, and *0.4*. Probably related to the HTTP client work in node. :(
+        If you manage to fix it or hear stories of it being fixed, please tell me.
+
+Once you clone the code run:
+
+$ git submodule update --init --recursive
+
+To fetch all the dependencies, and you should be "good to go" for some value of the phrase.
+
+The app uses the streaming API and Oauth to authenticate, so get yourself some keys if you intend to
+try it out.
+
+The app will create a unix-domain-socket repl in $(pwd)/repl.sock
+you'll need something like socat to connect to that (socat ./repl.sock -)
+
+If you aren't hardcore enough to remote into the app locally you can launch it with --repl to get one
+bound to stdio right away.
+
+The all is exposed in the repl as "$volcano" and you can close it with '$volcano.stop()' which should
+"gracefully" bring down anything you may have been doing, including any connected REPLs.
+
+
+FAQ:
+Q: Why don't use a package manager like every other sane developer?
+A: I don't like depending on a package manager to work and am quite content with submodules and
+   a small loader to find what I need.  It also makes it easier to fetch everything you need using
+   just source control. 
