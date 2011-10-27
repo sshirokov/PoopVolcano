@@ -1,2 +1,3 @@
 scratch.js
 *.keys.json
+node_modules/

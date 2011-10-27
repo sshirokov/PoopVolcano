@@ -1,0 +1,27 @@
+{"name":"PoopTag",
+"version":"0.0.1",
+"description":"",
+"homepage":"",
+"author":"",
+"contributors":[],
+"keywords":[],
+"directories":{},
+"files":[],
+"engines":{
+  "node":">= 0.4.1"
+  },
+"dependencies":{
+  "optimist":"0.2.8",
+  "node-twitter":"git+ssh://git@github.com:dinedal/node-twitter.git",
+  "tav":"0.1.0"
+  },
+"repository":{
+  "type":"git",
+  "url":""
+  },
+"bugs":{
+  "url":""
+  },
+"licenses":[],
+"private":true
+}

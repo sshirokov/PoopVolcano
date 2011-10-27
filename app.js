@@ -6,12 +6,6 @@ var options = {
         note: 'Open a REPL into the app',
         value: false
     },
-
-    data: {
-        note: "Data dir root",
-        value: "{0}/data".$format(process.cwd())
-    },
-
     consumer_key: {
         note: "Twitter consumer key"
     },
