@@ -27,11 +27,7 @@ for(op in keys) {
 }
 
 
-var opts = require('tav').set(
-    options,
-    "Usage: {self} [options]".$format({self: require('helpers').proc.$0()}),
-    true // Panic on unknown options
-);
+var opts = require('optimist').argv;
 
 //Boot
 var PoopVolcano = require('poopvolcano'),

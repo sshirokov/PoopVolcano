@@ -12,8 +12,7 @@
   },
 "dependencies":{
   "optimist":"0.2.8",
-  "node-twitter":"git+ssh://git@github.com:dinedal/node-twitter.git",
-  "tav":"0.1.0"
+  "node-twitter":"git://github.com/dinedal/node-twitter.git"
   },
 "repository":{
   "type":"git",
