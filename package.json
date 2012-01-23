@@ -12,7 +12,7 @@
   },
 "dependencies":{
   "optimist":"0.2.8",
-  "node-twitter":"git://github.com/dinedal/node-twitter.git"
+  "ntwitter":"0.2.9-2"
   },
 "repository":{
   "type":"git",

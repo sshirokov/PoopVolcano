@@ -20,17 +20,16 @@ var options = {
     }
 };
 
+var opts = require('optimist').argv;
+
 var keys = require('helpers/path').readJSON('.keys.json') || {};
 for(op in keys) {
     if(!keys.hasOwnProperty(op)) continue;
-    if(options[op]) options[op].value = keys[op];
+    if(opts[op]) opts[op] = keys[op];
 }
-
-
-var opts = require('optimist').argv;
 
 //Boot
 var PoopVolcano = require('poopvolcano'),
-    poop = new PoopVolcano();
+    poop = new PoopVolcano(keys);
 
 if(opts.repl) poop.repl.open();
