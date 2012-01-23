@@ -28,6 +28,12 @@ for(op in keys) {
     if(opts[op]) opts[op] = keys[op];
 }
 
+//ENV Vars win
+if(process.env['TWITTER_CONSUMER_KEY']) keys['consumer_key'] = process.env['TWITTER_CONSUMER_KEY'];
+if(process.env['TWITTER_CONSUMER_SECERT']) keys['consumer_secret'] = process.env['TWITTER_CONSUMER_SECERT'];
+if(process.env['TWITTER_ACCESS_TOKEN_KEY']) keys['access_token_key'] = process.env['TWITTER_ACCESS_TOKEN_KEY'];
+if(process.env['TWITTER_ACCESS_TOKEN_SECRET']) keys['access_token_secret'] = process.env['TWITTER_ACCESS_TOKEN_SECRET'];
+
 //Boot
 var PoopVolcano = require('poopvolcano'),
     poop = new PoopVolcano(keys);
