@@ -34,6 +34,16 @@ if(process.env['TWITTER_CONSUMER_SECERT']) keys['consumer_secret'] = process.env
 if(process.env['TWITTER_ACCESS_TOKEN_KEY']) keys['access_token_key'] = process.env['TWITTER_ACCESS_TOKEN_KEY'];
 if(process.env['TWITTER_ACCESS_TOKEN_SECRET']) keys['access_token_secret'] = process.env['TWITTER_ACCESS_TOKEN_SECRET'];
 
+
+if(process.env['HEROKU']) {
+    var http = require('http');
+    http.createServer(function (req, res) {
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      res.end('');
+    }).listen(process.env['PORT'], "0.0.0.0");
+}
+
+
 //Boot
 var PoopVolcano = require('poopvolcano'),
     poop = new PoopVolcano(keys);
