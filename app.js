@@ -41,6 +41,12 @@ if(process.env['HEROKU']) {
       res.writeHead(200, {'Content-Type': 'text/plain'});
       res.end('');
     }).listen(process.env['PORT'], "0.0.0.0");
+
+    //Prevent heroku from idle killing us
+    setInterval( function() {
+        http.get({host: "pooptag.herokuapp.com"}, function(res) {});
+    }, 30000); //30 seconds
+    
 }
 
 
